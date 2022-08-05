@@ -10,6 +10,7 @@ const createPasswordController = async (req, res) => {
 
     const name =  req.body.name
     const toEmail = req.body.toEmail  
+    console.log(req.body)
     console.log(req.body.toEmail)
     
     const transporter = nodemailer.createTransport({

@@ -11,7 +11,10 @@ const updateVotesController = async (req,res) => {
         return res.status(401).send("Unsuccessful")
 
     if(voter.secretToken !== secretToken)
-        return res.status(401).send("Unsuccessful")
+        return res.send("Unsuccessful")
+
+    if(voter.voted)
+        return res.send("Voted")
     
     const { president, vice, secretary } = req.body
     
@@ -87,7 +90,16 @@ const updateVotesController = async (req,res) => {
         
     }
 
-    res.status(401).send("Successful")
+    await Voter.findOne(
+        {pehchaanId},
+        {
+            $set: {
+                voted: true
+            }
+        }
+    )
+
+    res.status(200).send("Successful")
 }
 
 export default updateVotesController

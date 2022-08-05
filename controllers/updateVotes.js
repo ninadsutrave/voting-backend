@@ -7,9 +7,6 @@ const updateVotesController = async (req,res) => {
     const secretToken = req.body.secretToken
     const voter = await Voter.findOne({pehchaanId})
 
-    console.log(secretToken)
-    console.log(voter.secretToken)
-
     if(!voter)
         return res.status(401).send("Unsuccessful")
 
@@ -93,7 +90,7 @@ const updateVotesController = async (req,res) => {
         
     }
 
-    await Voter.findOne(
+    await Voter.updateOne(
         {pehchaanId},
         {
             $set: {
@@ -102,7 +99,7 @@ const updateVotesController = async (req,res) => {
         }
     )
 
-    res.status(200).send("Successful")
+    res.send("Successful")
 }
 
 export default updateVotesController

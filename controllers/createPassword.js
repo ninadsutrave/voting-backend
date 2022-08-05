@@ -1,4 +1,4 @@
-import uniqid from 'uniqid'
+import shortid from 'shortid'
 import Voters from '../models/voter.js'
 import nodemailer from 'nodemailer'
 import dotenv from 'dotenv'
@@ -6,7 +6,7 @@ dotenv.config()
 
 const createPasswordController = async (req, res) => {
 
-    const secretToken = uniqid()
+    const secretToken = shortid.generate()
 
     const name =  req.body.name
     // const toEmail = req.body.toEmail  
@@ -23,7 +23,7 @@ const createPasswordController = async (req, res) => {
     });
 
     let info = await transporter.sendMail({
-        from: 'Pehchaan Ek Safar <2019med1010@iitrpr.ac.in>', 
+        from: `Pehchaan Ek Safar <${process.env.EMAIL_ID}>`, 
         to: toEmail, 
         subject: "Pehchaan Ek Safar - Elections 2022",  
         html: `<p style="font-size: 20px">

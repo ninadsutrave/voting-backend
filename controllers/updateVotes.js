@@ -8,7 +8,7 @@ const updateVotesController = async (req,res) => {
     const voter = await Voter.find({pehchaanId})
 
     console.log(secretToken)
-    console.log(voter)
+    console.log(voter.secretToken)
 
     if(!voter)
         return res.status(401).send("Unsuccessful")

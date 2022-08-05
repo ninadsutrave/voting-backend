@@ -9,7 +9,9 @@ const createPasswordController = async (req, res) => {
     const secretToken = uniqid()
 
     const name =  req.body.name
-    const toEmail = req.body.toEmail  
+    //const toEmail = req.body.toEmail  
+    console.log(req.body.toEmail)
+    const toEmail = 'ninadsutrave@gmai.com'
     
     const transporter = nodemailer.createTransport({
         service: 'gmail',

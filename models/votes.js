@@ -32,16 +32,6 @@ const VotesSchema = new Schema({
         type: Number,
         required: true,
         default: 0
-    },
-    sonali: {
-        type: Number,
-        required: true,
-        default: 0
-    },
-    kallol: {
-        type: Number,
-        required: true,
-        default: 0
     }
 })
 

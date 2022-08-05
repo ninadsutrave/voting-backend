@@ -3,18 +3,17 @@ import Voter from '../models/voter.js'
 
 const updateVotesController = async (req,res) => {
 
-    const pehchaanId = req.body.pehchaanId 
     const secretToken = req.body.secretToken
-    const voter = await Voter.findOne({pehchaanId})
+    const voter = await Voter.findOne({secretToken})
 
     console.log(voter)
     console.log(secretToken)
 
     if(!voter)
-        return res.send("Unsuccessful")
+        return res.send("Couldn't recognise voter")
 
     if(voter.secretToken !== secretToken)
-        return res.send("Unsuccessful")
+        return res.send("Invalid Secret Token")
 
     if(voter.voted)
         return res.send("Voted")

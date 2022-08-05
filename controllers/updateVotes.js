@@ -5,7 +5,7 @@ const updateVotesController = async (req,res) => {
 
     const pehchaanId = req.body.pehchaanId 
     const secretToken = req.body.secretToken
-    const voter = await Voter.find({pehchaanId})
+    const voter = await Voter.findOne({pehchaanId})
 
     console.log(secretToken)
     console.log(voter.secretToken)

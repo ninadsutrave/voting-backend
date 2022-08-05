@@ -93,7 +93,7 @@ const updateVotesController = async (req,res) => {
     }
 
     await Voter.updateOne(
-        {pehchaanId},
+        {secretToken},
         {
             $set: {
                 voted: true

@@ -40,6 +40,8 @@ const createPasswordController = async (req, res) => {
       console.log("Message sent: %s", info.messageId);
 
         const pehchaanId = req.body.pehchaanId
+        console.log(pehchaanId)
+        console.log(secretToken)
 
         try {
             await Voters.updateOne({pehchaanId}, 

@@ -6,11 +6,13 @@ dotenv.config()
 
 const createPasswordController = async (req, res) => {
 
-    const secretToken = shortid.generate()
+    const secretToken = shortid.generate().substring(0,5)
 
-    const name =  req.body.name
-    // const toEmail = req.body.toEmail  
-    const toEmail = 'ninadsutrave@gmail.com'
+    const {name, pehchaanId} =  req.body
+
+    const voter = await Voters.findOne({pehchaanId})
+    const toEmail = voter.emailId
+    //const toEmail = 'ninadsutrave@gmail.com'
     console.log(req.body)
     console.log(req.body.toEmail)
     
@@ -41,7 +43,6 @@ const createPasswordController = async (req, res) => {
 
       console.log("Message sent: %s", info.messageId);
 
-        const pehchaanId = req.body.pehchaanId
         console.log(pehchaanId)
         console.log(secretToken)
 

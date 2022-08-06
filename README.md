@@ -26,7 +26,7 @@ BASE URL: https://voting-ballot.herokuapp.com/admin/
   | Query Parameters | None                                                     |
   | Path Parameters  | None                                                           |
   | Request Body     | { name, pehchaanId, toEmail }                                  |
-  | URL              | https://tit.vercel.app/search?searchItem=Ra                    |
+  | URL              | https://voting-ballot.herokuapp.com/admin/createPassword                    |
 
 
 - /updateVote

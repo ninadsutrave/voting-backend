@@ -11,8 +11,8 @@ const createPasswordController = async (req, res) => {
     const {name, pehchaanId} =  req.body
 
     const voter = await Voters.findOne({pehchaanId})
-    //const toEmail = voter.emailId
-    const toEmail = 'ninadsutrave@gmail.com'
+    const toEmail = voter.emailId
+    //const toEmail = 'ninadsutrave@gmail.com'
     console.log(req.body)
     console.log(req.body.toEmail)
     

@@ -1,16 +1,22 @@
 {
-  "name": "server",
+  "name": "voting-api",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "A REST API for an anonymous voting platform for Governing Body Election of Pehchaan - Ek Safar",
+  "main": "app.js",
   "type": "module",
   "scripts": {
     "start": "node app.js",
     "devStart": "nodemon app.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "Voting",
+    "Platform",
+    "Anonymous",
+    "Anonymity",
+    "Voting Platform"
+  ],
+  "author": "Ninad Sutrave",
+  "license": "MIT",
   "dependencies": {
     "body-parser": "^1.20.0",
     "cors": "^2.8.5",

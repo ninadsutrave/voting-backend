@@ -6,7 +6,7 @@ A REST API for a voting platform with anonymous voting. This platform was primar
 
 ## API EndPoints
 
-BASE URL: https://voting-ballot.herokuapp.com/admin/
+BASE URL: https://voting-backend.vercel.app/admin/
 
 - /viewVoters
 
@@ -16,7 +16,7 @@ BASE URL: https://voting-ballot.herokuapp.com/admin/
   | Query Parameters | searchItem                                                     |
   | Path Parameters  | None                                                           |
   | Request Body     | None                                                           |
-  | URL              | https://voting-ballot.herokuapp.com/admin/viewVoters?searchItem=Ra         |
+  | URL              | https://voting-backend.vercel.app/admin/viewVoters?searchItem=Ra         |
   
 - /createPassword
 
@@ -26,7 +26,7 @@ BASE URL: https://voting-ballot.herokuapp.com/admin/
   | Query Parameters | None                                                     |
   | Path Parameters  | None                                                           |
   | Request Body     | { name, pehchaanId, toEmail }                                  |
-  | URL              | https://voting-ballot.herokuapp.com/admin/createPassword                    |
+  | URL              | https://voting-backend.vercel.app/admin/createPassword                    |
 
 
 - /updateVote
@@ -37,7 +37,7 @@ BASE URL: https://voting-ballot.herokuapp.com/admin/
   | Query Parameters | None                                                  |
   | Path Parameters  | None                                                  |
   | Request Body     | { secretToken, president, vice, secretary }                                     |
-  | URL              | https://voting-ballot.herokuapp.com/admin/updateVote                      |
+  | URL              | https://voting-backend.vercel.app/admin/updateVote                      |
 
 - /viewResults
 
@@ -47,7 +47,7 @@ BASE URL: https://voting-ballot.herokuapp.com/admin/
   | Query Parameters | None                                  |
   | Body Parameters  | None                                  |
   | Request Body     | None                                  |
-  | URL              | https://voting-ballot.herokuapp.com/admin/viewResults          |
+  | URL              | https://voting-backend.vercel.app/admin/viewResults          |
 
 ## Front End
 
@@ -59,4 +59,4 @@ The application may be used for future elections of Pehchaan, and thus the admin
 
 ## License
 
-Apache-2.0 © Ninad Sutrave
+MIT © Ninad Sutrave

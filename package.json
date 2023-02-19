@@ -15,7 +15,15 @@
     "Anonymity",
     "Voting Platform"
   ],
-  "author": "Ninad Sutrave",
+  "author": {
+    "name": "Ninad Sutrave",
+    "email": "ninadsutrave@gmail.com",
+    "url": "https://ninadsutrave.in"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ninadsutrave/voting-backend"
+  },
   "license": "MIT",
   "dependencies": {
     "body-parser": "^1.20.0",

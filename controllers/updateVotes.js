@@ -18,80 +18,210 @@ const updateVotesController = async (req,res) => {
     if(voter.voted)
         return res.send("Voted")
     
-    const { president, vice, secretary } = req.body
+    const { president, vice, secretary1, secretary2, treasurer } = req.body
     
-    if(president === "chena") {
+    if(president === "A") {
 
         await Votes.updateOne(
             {index:0},
             {
                 $inc: {
-                    chenaPresident: 1
+                    A: 1
+                }
+            }
+        )
+
+    } else if(president === "B") {
+
+        await Votes.updateOne(
+            {index:0},
+            {
+                $inc: {
+                    B: 1
+                }
+            }
+        )
+
+    } else if(president === "C") {
+
+        await Votes.updateOne(
+            {index:0},
+            {
+                $inc: {
+                    C: 1
                 }
             }
         )
 
     }
-    else if(president === "tiwari") {
+    if(vice === "D") {
 
         await Votes.updateOne(
             {index:0},
             {
                 $inc: {
-                    tiwariPresident: 1
+                    D: 1
                 }
             }
         )
 
-    }
-    if(vice === "chena") {
+    } else if(vice === "E") {
 
         await Votes.updateOne(
             {index:0},
             {
                 $inc: {
-                    chenaVicePresident: 1
+                    E: 1
                 }
             }
         )
-
-    }
-    else if(vice === "tiwari") {
+        
+    } else if(vice === "E") {
 
         await Votes.updateOne(
             {index:0},
             {
                 $inc: {
-                    tiwariVicePresident: 1
+                    E: 1
+                }
+            }
+        )
+        
+    } else if(vice === "F") {
+
+        await Votes.updateOne(
+            {index:0},
+            {
+                $inc: {
+                    F: 1
+                }
+            }
+        )
+        
+    } else if(vice === "G") {
+
+        await Votes.updateOne(
+            {index:0},
+            {
+                $inc: {
+                    G: 1
+                }
+            }
+        )
+        
+    } else if(vice === "H") {
+
+        await Votes.updateOne(
+            {index:0},
+            {
+                $inc: {
+                    H: 1
                 }
             }
         )
         
     }
-    if(secretary === "chandan") {
+    if(secretary1 === "I") {
 
         await Votes.updateOne(
             {index:0},
             {
                 $inc: {
-                    chandan: 1
+                    I: 1
                 }
             }
         )
-    }
-    else if(secretary === "vinit") {
+    } else if(secretary1 === "J") {
 
         await Votes.updateOne(
             {index:0},
             {
                 $inc: {
-                    vinit: 1
+                    J: 1
+                }
+            }
+        )
+        
+    } else if(secretary1 === "K") {
+
+        await Votes.updateOne(
+            {index:0},
+            {
+                $inc: {
+                    K: 1
+                }
+            }
+        )
+        
+    }
+    if(secretary2 === "L") {
+
+        await Votes.updateOne(
+            {index:0},
+            {
+                $inc: {
+                    L: 1
+                }
+            }
+        )
+    } else if(secretary2 === "M") {
+
+        await Votes.updateOne(
+            {index:0},
+            {
+                $inc: {
+                    M: 1
+                }
+            }
+        )
+        
+    } else if(secretary2 === "N") {
+
+        await Votes.updateOne(
+            {index:0},
+            {
+                $inc: {
+                    N: 1
+                }
+            }
+        )
+        
+    } else if(secretary2 === "O") {
+
+        await Votes.updateOne(
+            {index:0},
+            {
+                $inc: {
+                    O: 1
                 }
             }
         )
         
     }
 
+    if(treasurer === "P") {
+
+        await Votes.updateOne(
+            {index:0},
+            {
+                $inc: {
+                    P: 1
+                }
+            }
+        )
+    } else if(treasurer === "Q") {
+
+        await Votes.updateOne(
+            {index:0},
+            {
+                $inc: {
+                    Q: 1
+                }
+            }
+        )
+        
+    }
+    
     await Voter.updateOne(
         {secretToken},
         {

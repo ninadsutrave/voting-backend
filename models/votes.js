@@ -3,32 +3,87 @@ import mongoose from "mongoose"
 const Schema = mongoose.Schema
 
 const VotesSchema = new Schema({
-    tiwariPresident: {
+    A: {
         type: Number,
         required: true,
         default: 0
     },
-    tiwariVicePresident: {
+    B: {
         type: Number,
         required: true,
         default: 0
     },
-    chenaPresident: {
+    C: {
         type: Number,
         required: true,
         default: 0
     },
-    chenaVicePresident: {
+    D: {
         type: Number,
         required: true,
         default: 0
     },
-    chandan: {
+    E: {
         type: Number,
         required: true,
         default: 0
     },
-    vinit: {
+    F: {
+        type: Number,
+        required: true,
+        default: 0
+    },
+    G: {
+        type: Number,
+        required: true,
+        default: 0
+    },
+    H: {
+        type: Number,
+        required: true,
+        default: 0
+    },
+    I: {
+        type: Number,
+        required: true,
+        default: 0
+    },
+    J: {
+        type: Number,
+        required: true,
+        default: 0
+    },
+    K: {
+        type: Number,
+        required: true,
+        default: 0
+    },
+    L: {
+        type: Number,
+        required: true,
+        default: 0
+    },
+    M: {
+        type: Number,
+        required: true,
+        default: 0
+    },
+    N: {
+        type: Number,
+        required: true,
+        default: 0
+    },
+    O: {
+        type: Number,
+        required: true,
+        default: 0
+    },
+    P: {
+        type: Number,
+        required: true,
+        default: 0
+    },
+    Q: {
         type: Number,
         required: true,
         default: 0

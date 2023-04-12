@@ -11,8 +11,8 @@ const createPasswordController = async (req, res) => {
     const {name, pehchaanId} =  req.body
 
     const voter = await Voters.findOne({pehchaanId})
-    const toEmail = voter.emailId
-    //const toEmail = 'ninadsutrave@gmail.com'
+    // const toEmail = voter.emailId
+    const toEmail = 'ninadsutrave@gmail.com'
     console.log(req.body)
     console.log(req.body.toEmail)
     
@@ -27,10 +27,10 @@ const createPasswordController = async (req, res) => {
     let info = await transporter.sendMail({
         from: `Pehchaan Ek Safar <${process.env.EMAIL_ID}>`, 
         to: toEmail, 
-        subject: "Pehchaan Ek Safar - Elections 2022",  
+        subject: "Pehchaan Ek Safar - Elections 2023",  
         html: `<p style="font-size: 20px">
                 Hello ${name}, <br><br>
-                Welcome to Pehchaan Ek Safar - Elections 2022! Please find below your one time secret token for casting a vote.<br>
+                Welcome to Pehchaan Ek Safar - Elections 2023! Please find below your one time secret token for casting a vote.<br>
                 </p>
                 <h2>Secret Token: ${secretToken}</h2>
                 <p style="font-size: 20px">

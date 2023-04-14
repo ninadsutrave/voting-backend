@@ -3,6 +3,9 @@ import mongoose from "mongoose"
 const Schema = mongoose.Schema
 
 const VoterSchema = new Schema({
+    index: {
+        type: Number
+    },
     name: {
         type: String,
         required: true

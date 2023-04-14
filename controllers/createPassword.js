@@ -14,7 +14,6 @@ const createPasswordController = async (req, res) => {
     // const toEmail = voter.emailId
     const toEmail = 'ninadsutrave@gmail.com'
     console.log(req.body)
-    console.log(req.body.toEmail)
     
     const transporter = nodemailer.createTransport({
         service: 'gmail',
@@ -42,9 +41,7 @@ const createPasswordController = async (req, res) => {
       });
 
       console.log("Message sent: %s", info.messageId);
-
-        console.log(pehchaanId)
-        console.log(secretToken)
+      console.log(secretToken)
 
         try {
             await Voters.updateOne({pehchaanId}, 

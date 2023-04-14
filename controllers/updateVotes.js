@@ -76,17 +76,6 @@ const updateVotesController = async (req,res) => {
             }
         )
         
-    } else if(vice === "E") {
-
-        await Votes.updateOne(
-            {index:0},
-            {
-                $inc: {
-                    E: 1
-                }
-            }
-        )
-        
     } else if(vice === "F") {
 
         await Votes.updateOne(
@@ -109,7 +98,9 @@ const updateVotesController = async (req,res) => {
             }
         )
         
-    } else if(vice === "H") {
+    } 
+
+    if(secretary1 === "H") {
 
         await Votes.updateOne(
             {index:0},
@@ -119,9 +110,7 @@ const updateVotesController = async (req,res) => {
                 }
             }
         )
-        
-    }
-    if(secretary1 === "I") {
+    } else if(secretary1 === "I") {
 
         await Votes.updateOne(
             {index:0},
@@ -131,6 +120,7 @@ const updateVotesController = async (req,res) => {
                 }
             }
         )
+        
     } else if(secretary1 === "J") {
 
         await Votes.updateOne(
@@ -142,7 +132,8 @@ const updateVotesController = async (req,res) => {
             }
         )
         
-    } else if(secretary1 === "K") {
+    }
+    if(secretary2 === "K") {
 
         await Votes.updateOne(
             {index:0},
@@ -152,9 +143,7 @@ const updateVotesController = async (req,res) => {
                 }
             }
         )
-        
-    }
-    if(secretary2 === "L") {
+    } else if(secretary2 === "L") {
 
         await Votes.updateOne(
             {index:0},
@@ -164,6 +153,7 @@ const updateVotesController = async (req,res) => {
                 }
             }
         )
+        
     } else if(secretary2 === "M") {
 
         await Votes.updateOne(
@@ -186,7 +176,9 @@ const updateVotesController = async (req,res) => {
             }
         )
         
-    } else if(secretary2 === "O") {
+    }
+
+    if(treasurer === "O") {
 
         await Votes.updateOne(
             {index:0},
@@ -196,30 +188,6 @@ const updateVotesController = async (req,res) => {
                 }
             }
         )
-        
-    }
-
-    if(treasurer === "P") {
-
-        await Votes.updateOne(
-            {index:0},
-            {
-                $inc: {
-                    P: 1
-                }
-            }
-        )
-    } else if(treasurer === "Q") {
-
-        await Votes.updateOne(
-            {index:0},
-            {
-                $inc: {
-                    Q: 1
-                }
-            }
-        )
-        
     }
     
     await Voter.updateOne(

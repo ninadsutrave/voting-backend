@@ -13,7 +13,7 @@ const candidateSchema = new Schema({
     },
     post: {
       type: String,
-      ref: 'PostNames',
+      ref: 'positions',
       required: true
     }
 });
